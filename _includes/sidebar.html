@@ -26,9 +26,11 @@
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-      <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+      <a class="sidebar-nav-item" href="/categories">카테고리</a>
+      <a class="sidebar-nav-item" href="/tags">태그</a>
+      <a class="sidebar-nav-item" href="/books">독서</a>
+      <a class="sidebar-nav-item" href="/archive">아카이브</a>
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub</a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
