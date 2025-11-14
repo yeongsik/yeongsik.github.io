@@ -12,24 +12,27 @@
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
+      <a class="sidebar-nav-item" href="/categories">카테고리</a>
+      <a class="sidebar-nav-item" href="/tags">태그</a>
+      <a class="sidebar-nav-item" href="/books">독서</a>
+      <a class="sidebar-nav-item" href="/archive">아카이브</a>
+
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
+        `layout: page` in the front-matter, excluding our main navigation pages.
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            {% unless node.url == "/categories" or node.url == "/tags" or node.url == "/books" or node.url == "/archive" %}
+              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            {% endunless %}
           {% endif %}
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item" href="/categories">카테고리</a>
-      <a class="sidebar-nav-item" href="/tags">태그</a>
-      <a class="sidebar-nav-item" href="/books">독서</a>
-      <a class="sidebar-nav-item" href="/archive">아카이브</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub</a>
     </nav>
 
