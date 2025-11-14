@@ -21,7 +21,7 @@ title: 독서
 <div class="all-book-posts">
   <h2>모든 독서 포스트</h2>
   <div class="book-list">
-    {% assign book_posts = site.posts | where_exp: "post", "post.tags contains 'book' or post.tags contains '독서'" %}
+    {% assign book_posts = site.posts | where_exp: "post", "post.tags contains 'book' or post.tags contains 'reading'" %}
     {% if book_posts.size > 0 %}
       {% for post in book_posts %}
         <div class="book-item">
