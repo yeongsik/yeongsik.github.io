@@ -18,6 +18,21 @@ author:
 
 paginate:         5
 
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO Settings
+lang:             ko_KR
+timezone:         Asia/Seoul
+
+social:
+  name:           Yeongsik
+  links:
+    - https://github.com/yeongsik
+
 # Custom vars
 version:          2.1.0
 
