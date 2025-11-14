@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Yeongsik's Dev Log
+tagline:          '주니어 백엔드 개발자의 성장 기록'
+description:      '알고리즘 문제 풀이 및 백엔드 기술 학습 내용을 기록합니다.'
+url:              https://yeongsik.github.io
+baseurl:          ""
+
+author:
+  name:           'Yeongsik'
+  url:            https://github.com/yeongsik
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/yeongsik/yeongsik.github.io
